@@ -12,12 +12,22 @@ function App() {
     setX(x + 1)
   }
 
+  function resetX() {
+    setX(0)
+  }
+
+  function decreaseX() {
+    setX(x - 1)
+  }
+
   return (
     <>
       <Area backgroundColor={"white"}>
         <Square side={"100px"} backgroundColor={"red"} borderRadius={20} label={x} />
 
-        <SquareController increase={changeX} />
+        <SquareController title={"Increase by One"} fn={changeX} />
+        <SquareController title={"Reset"} fn={resetX} />
+        <SquareController title={"Decrease by One"} fn={decreaseX} />
       </Area>
     </>
   )

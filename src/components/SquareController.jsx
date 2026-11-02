@@ -1,7 +1,7 @@
-function SquareController({ increase }) {
+function SquareController({ fn, title }) {
     return (
-        <button onClick={increase}>
-            Increase by One
+        <button onClick={fn}>
+            {title}
         </button>
     )
 }
